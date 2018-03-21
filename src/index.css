@@ -7,4 +7,9 @@
 
 .navbar{
 	margin-bottom:0px;
+	border-radius:0;
+}
+
+.thumbnail{
+	border-radius:0;
 }

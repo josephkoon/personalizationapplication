@@ -9,15 +9,15 @@ import { Link } from 'react-router-dom';
 
 var feelingData = {
 	"sad":[
-		{"tip":"Dont worry, everything will be alright", "img":"", "color":"blue"}
+		{"tip":"Dont worry, everything will be alright", "img":"", "color":"midnightblue"}
 	],
 
 	"happy":[
-		{"tip":"Share your happiness with the world!", "img":"", "color":"yellow"}
+		{"tip":"Share your happiness with the world", "img":"", "color":"gold"}
 	],
 
 	"bored":[
-		{"tip":"Boredom is the path to discovery", "img":"", "color":"purple"}
+		{"tip":"Boredom is the path to discovery", "img":"", "color":"orchid"}
 	]
 }
 
@@ -96,7 +96,7 @@ class Personalize extends Component {
   	var topics = topicData[topic].map((topic) => {
   		console.log(topic)
   		return(
-		  <div className="col-xs-4">
+		  <div className="text-center col-xs-12 col-md-4">
 		    <div className="thumbnail">
 		      <img style={{height:'150px'}} src={topic.img} alt="..." />
 		      <div className="caption">
@@ -111,7 +111,7 @@ class Personalize extends Component {
 
   	var products = productData[product].map((product) => {
   		return(
-		  <div className="col-xs-4">
+		  <div className="text-center col-xs-12 col-md-4">
 		    <div className="thumbnail">
 		      <img style={{height:'150px'}} src={product.img} alt="..." />
 		      <div className="caption">
@@ -126,7 +126,7 @@ class Personalize extends Component {
 
 
     return (
-      <div>
+      <div style={style}>
        
 
     <nav className="navbar navbar-inverse">
@@ -140,7 +140,7 @@ class Personalize extends Component {
           </button>
 
           <Link to="/">
-          	<button type="button" class="pull-right btn btn-sm btn-default navbar-btn">Personalize</button>
+          	<button type="button" class="pull-right btn btn-sm btn-default navbar-btn">Personalize More</button>
           </Link>
 
           <a className="navbar-brand" href="#">{this.props.preferences.feeling}</a>
